@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="layer1_weights_bram_synth_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/layer1_weights_bram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="layer1_biases_bram_synth_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/layer1_biases_bram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="layer3_weights_bram_synth_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/layer3_weights_bram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="layer3_biases_bram_synth_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/layer3_biases_bram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="layer2_weights_bram_synth_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/layer2_weights_bram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="layer2_biases_bram_synth_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/layer2_biases_bram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="image_bram_ip_synth_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/image_bram_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uart_ila_synth_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/uart_ila_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="clock_gen_synth_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/clock_gen_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="layer1_weights_bram_synth_1"/>
+		<Parent Id="layer1_biases_bram_synth_1"/>
+		<Parent Id="layer3_weights_bram_synth_1"/>
+		<Parent Id="layer3_biases_bram_synth_1"/>
+		<Parent Id="layer2_weights_bram_synth_1"/>
+		<Parent Id="layer2_biases_bram_synth_1"/>
+		<Parent Id="image_bram_ip_synth_1"/>
+		<Parent Id="uart_ila_synth_1"/>
+		<Parent Id="clock_gen_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="D:/Vivado/Fashion_MNIST_MLP/Fashion_MNIST_MLP.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="synth_1"/>
+		<Parent Id="layer1_weights_bram_synth_1"/>
+		<Parent Id="layer1_biases_bram_synth_1"/>
+		<Parent Id="layer3_weights_bram_synth_1"/>
+		<Parent Id="layer3_biases_bram_synth_1"/>
+		<Parent Id="layer2_weights_bram_synth_1"/>
+		<Parent Id="layer2_biases_bram_synth_1"/>
+		<Parent Id="image_bram_ip_synth_1"/>
+		<Parent Id="uart_ila_synth_1"/>
+		<Parent Id="clock_gen_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+
