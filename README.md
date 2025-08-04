@@ -18,7 +18,7 @@ Rather than relying on GPUs or CPUs, the neural network is accelerated via FPGA,
 - **UART Interface** (9600 baud): For sending 28×28 grayscale image data from PC to FPGA.
 - **Dual-Port BRAM**: Buffers image data across two clock domains (125 MHz for UART, 36 MHz for NN).
   ## Neural Network Architecture
-      - **Three-Layer Neural Network**:
+      Three-Layer Neural Network:
       - Input Layer: 784 neurons
       - Hidden Layers: 128 and 64 neurons
       - Output Layer: 10 neurons (classes 0–9)
