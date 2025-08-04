@@ -17,10 +17,11 @@ Rather than relying on GPUs or CPUs, the neural network is accelerated via FPGA,
 
 - **UART Interface** (9600 baud): For sending 28×28 grayscale image data from PC to FPGA.
 - **Dual-Port BRAM**: Buffers image data across two clock domains (125 MHz for UART, 36 MHz for NN).
-- **Three-Layer Neural Network**:
-  - Input Layer: 784 neurons
-  - Hidden Layers: 128 and 64 neurons
-  - Output Layer: 10 neurons (classes 0–9)
+  ## Neural Network Architecture
+      - **Three-Layer Neural Network**:
+      - Input Layer: 784 neurons
+      - Hidden Layers: 128 and 64 neurons
+      - Output Layer: 10 neurons (classes 0–9)
 - **Seven-Segment Display**: Displays the classification result (0–9).
 - **LEDs**: Indicate system states (Idle, Receiving, Processing, Result Ready).
 
@@ -35,7 +36,7 @@ Rather than relying on GPUs or CPUs, the neural network is accelerated via FPGA,
 
 ## ⚙️ Tools & IPs Used
 
-- **Vivado Design Suite (2023.x)**
+- **Vivado Design Suite (2023.2)**
 - **Clocking Wizard**: Converts system clock (125 MHz) to 36 MHz for NN processing.
 - **Integrated Logic Analyzer (ILA)**: Debugging UART and state machine behavior.
 - **BRAM IP Cores**: Store weights and biases from trained model.
